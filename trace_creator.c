@@ -15,7 +15,7 @@ int main(){
 	char var;
 
 	FILE *traceFile;
-	traceFile = fopen("trace2.txt", "w");
+	traceFile = fopen("trace.txt", "w");
 	
 	printf("Press 0 for a random trace; Press 1 for a sequential trace: ");
 	scanf("%d", &traceType);
