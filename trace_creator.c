@@ -10,6 +10,7 @@ int generateHexNumber(){
 }
 
 int main(){
+	int size = 10000;
 	int traceType;
 	int lines = 0;
 	char var;
@@ -21,9 +22,9 @@ int main(){
 	scanf("%d", &traceType);
 
 	if(traceType == 0){
-		while(lines != 100){
+		while(lines != size){
 			int address = generateHexNumber();
-			fprintf(traceFile, "0 %x\n", address);
+			fprintf(traceFile, "0 %08x\n", address);
 			lines++;
 		}
 	}
@@ -31,26 +32,15 @@ int main(){
 	else{
 		int address = 0;
 
-		while(lines != 100){	
-			fprintf(traceFile, "0 %x\n", address);
+		while(lines != size){	
+			fprintf(traceFile, "0 %08x\n", address);
 			address += 4;
 			lines++;
 		}
 	}
 
 	printf("Trace file population complete.\n");
-	printf("Press any key to exit: ");
-	var = getch();
-
-
-	/*if(var == 'X' || var == 'x'){
-		printf("Thank you!\n");
-	}
-
-	else{
-		printf("That's not an 'X'! We're all doomed!\n");
-	}*/
-
+	printf("Program exiting...\n");
 	fclose(traceFile);
 	exit(0);
 }

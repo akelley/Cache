@@ -1,0 +1,8 @@
+4096 cache size; 64 block size; 4 lines/set
+
+trace (mine) --> 	   ; (0.00% - Evan's; 10000; no hits); (0.00% - mine; 10000; no hits)
+trace1 (online) --> 61.54%; (69.23% - mine); 		      (69.23% - Evan's)
+trace3 (online) --> 70.83%; (84.38% - mine);		      (84.38% - Evan's)
+trace4 (Evan's) --> 	   ; (0.00% - Evan's; 9999; no hits);   (0.00% - 9999; no hits); 
+trace5 (online) --> 23.53%; (23.53% - mine); 		      (23.53% - Evan's)
+
